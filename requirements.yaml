@@ -1,0 +1,7 @@
+dependencies:
+  - name: one-peg-backend-chart
+    repository: https://artifactory.dagility.com/artifactory/helm/
+    version: 0.1.0
+  - name: one-peg-frontend-chart
+    repository: https://artifactory.dagility.com/artifactory/helm/
+    version: 0.1.0

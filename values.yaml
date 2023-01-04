@@ -1,0 +1,32 @@
+one-peg-backend-chart:
+  image:
+    repository: artifactory.dagility.com/docker/one-peg-backend
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: one-peg-backend-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
+
+one-peg-frontend-chart:
+  image:
+    repository: artifactory.dagility.com/docker/one-peg-frontend
+    tag: latest
+    pullPolicy: Always
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
+    hosts:
+    - host: one-peg-frontend-default.dagility.com
+      paths:
+      - /
+  serviceAccount:
+    create: false
+
